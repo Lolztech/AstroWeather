@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navigationbar from './navigationbar';
+import WeekModule from './weekModule';
+import TodayModule from './todayModule';
+import AstronomyModule from './astronomyModule';
 import './App.css';
 
 function App() {
+  // Step 1: Create state variables to store latitude and longitude
+  const [latLong, setLatLong] = useState({ lat: null, lon: null, name: null });
+  //Define a callback function to update the state with lat and long
+  const handleSearch = (data) => {
+    setLatLong(data);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navigationbar onSearch={handleSearch} />
+      <TodayModule lat={latLong.lat} lon={latLong.lon} name={latLong.name} />
+      <WeekModule lat={latLong.lat} lon={latLong.lon} />
+      <AstronomyModule></AstronomyModule>
+    </>
   );
 }
 

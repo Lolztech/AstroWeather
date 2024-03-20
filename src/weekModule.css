@@ -1,0 +1,24 @@
+.Week__Container {
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    justify-content: flex-start; /* Aligns children to the top */
+    align-items:flex-start; /* Centers children horizontally */
+    width: 50%;
+    margin: 0 auto; /* Keeps the container centered */
+    margin-top: 50px; /* Adds space at the top */
+    padding: 20px;
+    background-color: #0B0B0E;
+    border-radius: 8px; /* Adds beveled edges */
+}
+
+.Week__Day{
+    display: flex;
+    flex-direction: row; /* Aligns children horizontally */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: flex-start; /* Aligns items to the start of the cross axis */
+    width: 100%; /* Ensures the container spans the full width of its parent */
+}
+
+.white-text {
+    color: white;
+}

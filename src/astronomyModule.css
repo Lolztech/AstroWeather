@@ -1,0 +1,11 @@
+.Astronomy__CelestialBodyContainer{
+    display: flex;
+    justify-content: flex-start; /* Aligns children to the right */
+    align-items: center; /* Centers children vertically if needed */
+    width: 50%;
+    margin: 0 auto; /* Keeps the container centered */
+    margin-top: 50px; /* Adds space at the top */
+    padding: 20px;
+    background-color: #0B0B0E;
+    border-radius: 8px; /* Adds beveled edges */
+}
