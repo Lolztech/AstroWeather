@@ -5,7 +5,7 @@ export default function Navigationbar({ onSearch }) {
   const [inputValue, setInputValue] = useState('');
 
   const fetchLatLong = async (location) => {
-    const apiKey = '39fa48f334385f9f448fd1cfa4c1dc95'; // Replace YOUR_API_KEY_HERE with your actual API key
+    const apiKey = '4c9d83613e1f814a6c1d1f57c346b997'; // Replace YOUR_API_KEY_HERE with your actual API key
     const url = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${apiKey}`;
     
     try {

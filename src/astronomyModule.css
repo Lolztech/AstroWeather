@@ -9,3 +9,55 @@
     background-color: #0B0B0E;
     border-radius: 8px; /* Adds beveled edges */
 }
+
+.planet_Container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #0B0B0E;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Ensures content does not spill out, but consider removing if you want the image to be visible outside the container */
+
+    color: white !important;
+
+    padding: 10px;
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    white-space: nowrap; /* Prevent wrapping of text */
+    line-height: 1.2; /* Adjust line height */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+}
+
+.container {
+    max-width: 800px; /* Adjust this value to your preference */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    text-align: center; /* Center the content horizontally */
+}
+
+table {
+    width: 70%; /* Make the table fill the container */
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #444;
+}
+
+h2{ 
+    text-align: center;
+}

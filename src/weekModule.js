@@ -7,7 +7,7 @@ export default function WeekModule({ lat, lon }) {
   useEffect(() => {
     const fetchForecastData = async () => {
       if (lat && lon) {
-        const apiKey = '39fa48f334385f9f448fd1cfa4c1dc95'; // Use your actual API key
+        const apiKey = '4c9d83613e1f814a6c1d1f57c346b997'; // Use your actual API key
         const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
         try {

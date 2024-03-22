@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import uranusImage from './uranus.png'
 import './todayModule.css';
 
 export default function TodayModule({ lat, lon, name }) {
@@ -8,7 +7,7 @@ export default function TodayModule({ lat, lon, name }) {
   useEffect(() => {
     const fetchWeatherData = async () => {
       if (lat && lon) {
-        const apiKey = '39fa48f334385f9f448fd1cfa4c1dc95'; // Replace with your OpenWeatherMap API Key
+        const apiKey = '4c9d83613e1f814a6c1d1f57c346b997'; // Replace with your OpenWeatherMap API Key
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
         try {
@@ -38,25 +37,18 @@ export default function TodayModule({ lat, lon, name }) {
 
   return (
     <div className="Today__Container">
-      <div className="Today__Weather">
-        <div className="Today__Weatherinner">
-          {/* Display the formatted date */}
-          <p className="white-text"> {name}</p>
-          <p className="white-text">{currentDate}</p>
-          {weatherData ? (
-            <>
-              <p className="white-text">{weatherData.weather[0].main}</p>
-              <p className="white-text">{weatherData.main.temp}°C</p>
-              {/* Display other weather data as needed */}
-            </>
-          ) : (
-            <p className="white-text">No weather data available. Search for a location!</p>
-          )}
-        </div>
-      </div>
-        <div className="Today__ImageContainer">
-          <img className="Today__Image" src={uranusImage} alt="Uranus" />
-        </div>
+      {/* Display the formatted date */}
+      <p className="white-text"> {name}</p>
+      <p className="white-text">{currentDate}</p>
+      {weatherData ? (
+        <>
+          <p className="white-text">{weatherData.weather[0].main}</p>
+          <p className="white-text">{weatherData.main.temp}°C</p>
+          {/* Display other weather data as needed */}
+        </>
+      ) : (
+        <p className="white-text">No weather data available. Search for a location!</p>
+      )}
     </div>
   );
 }

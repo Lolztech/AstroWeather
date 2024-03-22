@@ -1,6 +1,5 @@
 .Today__Container {
     display: flex;
-    flex-direction: row; /* default, but explicitly stated for clarity */
     justify-content: flex-start;
     align-items: center;
     width: 50%;
@@ -11,68 +10,14 @@
     border-radius: 8px;
     position: relative;
     overflow: hidden; /* Ensures content does not spill out, but consider removing if you want the image to be visible outside the container */
-    z-index: -2; /* Ensures it falls behind the Today__Weather */
+
+
+    padding: 10px;
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    white-space: nowrap; /* Prevent wrapping of text */
+    line-height: 1.2; /* Adjust line height */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
 }
-
-.Today__ImageContainer {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) translatex(-100%);
-    z-index: -1; /* Ensures it falls behind the Today__Weather */
-}
-
-.Today__Image {
-    width: 190px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.Today__Weather {
-    display: flex;
-    align-items: center; /* Adjust as needed */
-    justify-content: center; /* Adjust as needed */
-    width: 190px;
-    height: 254px;
-    transition: all 0.2s;
-    position: relative;
-    cursor: pointer;
-
-    z-index: 1; /* Ensures it stays above the image */
-
-    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
-    border-radius: 8px;
-    transition: all .3s;
-}
-
-.Today__Weather:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-    border-radius: 8px;
-    z-index: inherit;
-   }
-
-.Today__Weatherinner {
-    width: inherit;
-    height: inherit;
-    background: rgba(255,255,255,.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-
-    text-align: center;
-
-    z-index: 1;
-
-    background-color: #1a1a1a;
-    transition: all .2s;
-}
-
-.white-text {
-    color: white;
-  }
-
-.Today__Weatherinner:hover {
-    transform: scale(0.98);
-    border-radius: 8px;
-    z-index: 1;
-   }
 

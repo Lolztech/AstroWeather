@@ -17,7 +17,7 @@ function App() {
       <Navigationbar onSearch={handleSearch} />
       <TodayModule lat={latLong.lat} lon={latLong.lon} name={latLong.name} />
       <WeekModule lat={latLong.lat} lon={latLong.lon} />
-      <AstronomyModule></AstronomyModule>
+      <AstronomyModule lat={latLong.lat} lon={latLong.lon}/>
     </>
   );
 }
